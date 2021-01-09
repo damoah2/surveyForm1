@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Survey Form
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+                font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+                font-size: 1.2em;
+                margin: auto;
+                padding: 10px;
+            }
+
+            body {
+                background-image: linear-gradient(
+                    123deg,
+                    rgba(255,153,102,0.3),
+                    rgba(136, 136, 206, 0.4)
+                ), url(https://i.imgur.com/4yNEezL.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top;
+            }
+            #container {
+                margin: auto;
+            }
+
+            /*Survey*/
+            #survey-form{
+                background-color: rgba(0,0,0,0.7);
+                padding:1.5em;
+                color:#fff;
+                border-radius: 2%;
+                max-width: 700px;
+                margin: auto;
+            }
+
+            input {
+                margin: 5px 0px 10px 0px;
+            }
+
+            header, footer {
+                text-align: center;
+                margin:auto;
+            }
+
+            header {
+                padding: 0px 10px;
+                max-width: 700px;
+            }
+            header p {
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 id="title">Favorite TV Show Survey</h1>
+                <p id="description">By taking this survey you will be helping us provide our viewers with better TV Shows.
+                    Thanks for your time.</p>
+            </header>
+            <form id="survey-form">
+                <!--Name-->
+                <div class="form-group">
+                    <label id="name-label" for="name">
+                        Name
+                    </label><br>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+        
+                <!--Email-->
+                <div class="form-group">
+                    <label id="email-label" for="email">
+                        Email
+                    </label><br>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+        
+                <!--Age-->
+                <div class="form-group">
+                    <label id="number-label" for="number">
+                        Age
+                        <span class="clue">(optional)</span>
+                    </label><br>
+                    <input type="text" name="age" id="number" class="form-control" placeholder="Age">
+                </div>
+        
+                <!--Drop Down Menu-->
+                <div class="form-group">
+                    <p>Which genre best do you like?</p>
+                    <select id="dropdown" name="genre" class="form-control" required>
+                        <option disabled selected value> Select Your Favorite Genre</option>
+                        <option value="action">Action</option>
+                        <option value="animation">Animation</option>
+                        <option value="horror">Horror</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Sci-fi</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="supernatural">Supernatural</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+        
+                <!--Checkboxes-->
+                <div class="form-group">
+                    <p>
+                        Which one of these shows have you watched?
+                        <span class="clue">(Check all that apply)</span>
+                    </p>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="the-good-place">
+                        The Good Place
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="death-note">
+                        Death Note
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="humans">
+                        Humans
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="upload">
+                        Upload
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="kenichi">
+                        KenIchi: The Mightiest Disciple
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="good-omens">
+                        Good Omens
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="pokemon">
+                        Pokemon
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="made-in-abyss">
+                        Made In Abyss
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="dragon-ball-z">
+                        Dragon Ball Z
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="mr-robot">
+                        Mr. Robot
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="the-man-in-the-high-castle">
+                        The Man In the High Castle
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="the-feed">
+                        The Feed
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="toradora">
+                        Toradora!
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="ronja-the-robbers-daughter">
+                        Ronja, the Robber’s Daughter
+                    </label> <br>
+                    <label>
+                        <input name="watched" type="checkbox" class="checkbox" value="journey-quest">
+                        JourneyQuest
+                    </label>
+                </div>
+        
+                <!--Radio Choice-->
+                <div class="form-group">
+                    <p>Would you recommend this survey to a friend?</p>
+                    <label>
+                        <input name="user-recommend" value="yes" type="radio" class="input-radio" checked>
+                        Yes
+                    </label>
+                    <label>
+                        <input name="user-recommend" value="maybe" type="radio" class="input-radio">
+                        Maybe
+                    </label>
+                    <label>
+                        <input name="user-recommend" value="not-sure" type="radio" class="input-radio">
+                        Not Sure
+                    </label>
+                </div>
+        
+                <!--Textarea-->
+                <div class="form-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="comment" class="input-textarea" name="comment"
+                        placeholder="Enter your comment here"></textarea>
+                </div>
+        
+                <!--Submit-->
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+            <footer id="footer">
+                This a Project.
+            </footer>
+        </div>
+    </body>
+</html>
